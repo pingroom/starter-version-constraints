@@ -1,0 +1,51 @@
+{
+  "catalogId": "paper-tools",
+  "title": "Paper release catalog",
+  "context": "Internal paper tools; declared dependencies are fixed.",
+  "target": "Workshop workstation, runtime family R2",
+  "packages": [
+    {
+      "id": "editor",
+      "label": "Paper editor",
+      "versions": [
+        {
+          "id": "v1",
+          "label": "Editor release 1",
+          "rank": 1
+        },
+        {
+          "id": "v2",
+          "label": "Editor release 2",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "renderer",
+      "label": "Paper renderer",
+      "versions": [
+        {
+          "id": "v1",
+          "label": "Renderer release 1",
+          "rank": 1
+        },
+        {
+          "id": "v2",
+          "label": "Renderer release 2",
+          "rank": 2
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "editor-v2",
+      "fromPackage": "editor",
+      "fromVersion": "v2",
+      "toPackage": "renderer",
+      "allowedVersions": [
+        "v2"
+      ]
+    }
+  ]
+}
